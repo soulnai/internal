@@ -12,6 +12,7 @@ import time
 #selenium
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class LohikaReferralBonusCheck(unittest.TestCase):
@@ -19,11 +20,12 @@ class LohikaReferralBonusCheck(unittest.TestCase):
     def setUp(self):
         """Open referral bonus page"""
         #self.driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.HTMLUNIT)
-        username = "soulnai"
-        access_key = "e6f43059-2593-4fea-9ce1-757a1ead09d2"
-        #capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
+        username = os.environ["SAUCE_USERNAME"]
+        access_key = os.environ["SAUCE_ACCESS_KEY"]
+        desired_capabilities=['DesiredCapabilities.HTMLUNITWITHJS']
+        desired_capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
         hub_url = "%s:%s@localhost:4445" % (username, access_key)
-        driver = webdriver.Remote(desired_capabilities="", command_executor="http://%s/wd/hub" % hub_url)
+        driver = webdriver.Remote(desired_capabilities=desired_capabilities, command_executor="http://%s/wd/hub" % hub_url)
         self.wait = WebDriverWait(self.driver, 10)
         self.driver.get("http://www.lohika.com.ua/#vacancies-referral")
 
