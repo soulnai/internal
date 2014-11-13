@@ -17,7 +17,12 @@ class LohikaReferralBonusCheck(unittest.TestCase):
 
     def setUp(self):
         """Open referral bonus page"""
-        self.driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.HTMLUNIT)
+        #self.driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.HTMLUNIT)
+        username = os.environ["SAUCE_USERNAME"]
+        access_key = os.environ["SAUCE_ACCESS_KEY"]
+        capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
+        hub_url = "%s:%s@localhost:4445" % (username, access_key)
+        driver = webdriver.Remote(desired_capabilities=capabilities, command_executor="http://%s/wd/hub" % hub_url)
         self.wait = WebDriverWait(self.driver, 10)
         self.driver.get("http://www.lohika.com.ua/#vacancies-referral")
 
@@ -47,4 +52,3 @@ if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
 
-    
