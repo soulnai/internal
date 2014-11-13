@@ -6,6 +6,7 @@ Created on Nov 7, 2014
 
 #stdlib
 import unittest
+import os
 import time
 
 #selenium
@@ -20,9 +21,9 @@ class LohikaReferralBonusCheck(unittest.TestCase):
         #self.driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.HTMLUNIT)
         username = os.environ["SAUCE_USERNAME"]
         access_key = os.environ["SAUCE_ACCESS_KEY"]
-        capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
+        #capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
         hub_url = "%s:%s@localhost:4445" % (username, access_key)
-        driver = webdriver.Remote(desired_capabilities=capabilities, command_executor="http://%s/wd/hub" % hub_url)
+        driver = webdriver.Remote(desired_capabilities="", command_executor="http://%s/wd/hub" % hub_url)
         self.wait = WebDriverWait(self.driver, 10)
         self.driver.get("http://www.lohika.com.ua/#vacancies-referral")
 
