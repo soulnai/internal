@@ -39,7 +39,7 @@ class MyPcSwitchViewsTest(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def test_switch_to_test_plan_perspective(self):
+    def switch_to_test_plan_perspective(self):
         """Switch to test plan perspective after login"""
         driver = self.driver
         wait = WebDriverWait(driver, 10)
