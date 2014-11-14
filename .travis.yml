@@ -2,8 +2,6 @@ language: python
 python:
   - "2.7"
 before_install:
-  - "sh -e /etc/init.d/xvfb start"
-  - "export DISPLAY=:99.0"
   - "wget http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar"
   - "java -jar selenium-server-standalone-2.44.0.jar > /dev/null &"
   - "sleep 10"
