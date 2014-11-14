@@ -57,6 +57,7 @@ class MyPcSwitchViewsTest(unittest.TestCase):
         #test_plan.click()
 
 
-if __name__ == "__main__":
+"""if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     pytest.main()
+"""
