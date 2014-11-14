@@ -6,9 +6,7 @@ before_install:
 # command to install dependencies
 install:
   - "pip install -r requirements.txt"
-addons:
-  sauce_connect:
-    username: "soulnai"
-    access_key: "e6f43059-2593-4fea-9ce1-757a1ead09d2"
+before_script:
+  - "java -jar selenium-server-standalone-2.44.0.jar"
 # command to run tests
 script: nosetests
