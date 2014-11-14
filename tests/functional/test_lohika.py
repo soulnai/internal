@@ -19,7 +19,9 @@ class LohikaReferralBonusCheck(unittest.TestCase):
 
     def setUp(self):
         """Open referral bonus page"""
-        self.driver = webdriver.Remote("http://127.0.0.2:4444/wd/hub", webdriver.DesiredCapabilities.FIREFOX)
+        self.driver = webdriver.Remote("http://127.0.0.2:4444/wd/hub", desired_capabilities={'browserName': 'htmlunit',
+                         'version': '2',
+                        'javascriptEnabled': True})
         """username = os.environ["SAUCE_USERNAME"]
         access_key = os.environ["SAUCE_ACCESS_KEY"]
         desired_capabilities=['DesiredCapabilities.HTMLUNITWITHJS']
