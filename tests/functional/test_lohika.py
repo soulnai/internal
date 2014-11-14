@@ -23,7 +23,7 @@ class LohikaReferralBonusCheck(unittest.TestCase):
         username = os.environ["SAUCE_USERNAME"]
         access_key = os.environ["SAUCE_ACCESS_KEY"]
         desired_capabilities=['DesiredCapabilities.HTMLUNITWITHJS']
-        desired_capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
+        #desired_capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
         hub_url = "%s:%s@localhost:4445" % (username, access_key)
         driver = webdriver.Remote(desired_capabilities=desired_capabilities, command_executor="http://%s/wd/hub" % hub_url)
         self.wait = WebDriverWait(self.driver, 10)
