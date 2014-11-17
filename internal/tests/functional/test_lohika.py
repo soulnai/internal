@@ -6,22 +6,25 @@ Created on Nov 7, 2014
 
 #stdlib
 import unittest
-import os
 import time
 
 #selenium
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver import ActionChains
+
+#pytest
+#import pytest
 
 
-class LohikaReferralBonusCheck(unittest.TestCase):
+class LohikaReferalBonusCheck(unittest.TestCase):
 
     def setUp(self):
         """Open referral bonus page"""
-        self.driver = webdriver.Remote("http://217.146.255.21:4444/wd/hub", desired_capabilities={'browserName': 'htmlunit',
-                         'version': '2',
-                        'javascriptEnabled': True})
+        self.driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.HTMLUNIT)
         self.wait = WebDriverWait(self.driver, 10)
         self.driver.get("http://www.lohika.com.ua/#vacancies-referral")
 
@@ -50,4 +53,3 @@ class LohikaReferralBonusCheck(unittest.TestCase):
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
-
