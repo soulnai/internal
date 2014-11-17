@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 '''
 Created on Nov 7, 2014
 
@@ -6,8 +9,9 @@ Created on Nov 7, 2014
 
 #stdlib
 import unittest
-import os
+import sys
 import time
+
 
 #selenium
 from selenium import webdriver
@@ -30,8 +34,19 @@ class LohikaReferralBonusCheck(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def check_if_text_present(self):
-        assert "РОЗРОБКА ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ" in self.driver.page_source
+    def test_if_drop_down_expands_correct(self):
+        '''
+        Click on expand link.
+        Check if reqired element is displayed
+        '''
+        element_drop_down_activate = self.driver.find_element_by_xpath(
+            '//*[@id="company-development"]/div[1]/ul/li[1]/a')
+        element_drop_down_activate.click()
+        element_to_check = self.driver.find_element_by_xpath(
+            '//*[@id="company-development"]/div[1]/ul/li[2]/ul[2]/ul[4]/li[1]/span')
+        assert element_to_check.is_displayed()
+        #string_to_check = "Розробка на платформі S60 з використанням Native C++"
+        #assert string_to_check in self.driver.page_source
 
 
 if __name__ == "__main__":
