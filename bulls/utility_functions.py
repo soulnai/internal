@@ -14,6 +14,7 @@ class GameUtilityFunctions(object):
         self.numbers_list = []
         self.try_to_file = 0
         self.bk_get_from_file = [0, 0]
+        self.secret_number = 0
 
     def if_number_contain_duplicates(self, number):
         num = str(number)
@@ -30,6 +31,7 @@ class GameUtilityFunctions(object):
 
     def analyze_bulls_cows(self):
         my_current_try = str(self.try_to_file)
+        list_to_iterate = []
         for num_from_list_to_compare in self.numbers_list:
             bulls = 0
             cows = 0
@@ -39,30 +41,38 @@ class GameUtilityFunctions(object):
                     if num_to_str[i] == my_current_try[j]:
                         if i == j:
                             bulls = bulls + 1
-                        if i != j:
+                        else:
                             cows = cows + 1
-            if cows != self.bk_get_from_file[0] and bulls != self.bk_get_from_file[1]:
-                self.numbers_list.remove(num_from_list_to_compare)
+            if cows != int(self.bk_get_from_file[0]) or bulls != int(self.bk_get_from_file[1]):
+                list_to_iterate.append(num_from_list_to_compare)
+        if len(list_to_iterate) > 0:
+            for elem in list_to_iterate:
+                self.numbers_list.remove(elem)
+
+    def generate_secret_number(self):
+        self.generate_numbers_list()
+        rand_i = random.randint(0, len(self.numbers_list))
+        self.secret_number = self.numbers_list[rand_i]
+        return self.secret_number
+
+    def return_bulls_cows_to_file(self, try_from_file, secret_number):
+        bulls = 0
+        cows = 0
+        try_num_to_str = str(try_from_file)
+        secret_num_to_str = str(secret_number)
+        for i in range(0, self.game_number_length, 1):
+            for j in range(0, self.game_number_length, 1):
+                if try_num_to_str[i] == secret_num_to_str[j]:
+                    if i == j:
+                        bulls = bulls + 1
+                    else:
+                        cows = cows + 1
+        return str(cows) + str(bulls)
 
     def generate_number(self):
-        rand_i = random.randint(0, len(self.numbers_list))
-        return self.numbers_list[rand_i]
-
-
-if __name__ == "__main__":
-    #import sys;sys.argv = ['', 'Test.testName']
-    file = file_utilities.FileUtilities()
-
-
-    game = GameUtilityFunctions()
-    utils = file_utilities.FileUtilities()
-    game.generate_numbers_list()
-    #utils.write_try_to_file(game.generate_number())
-    utils.get_answer(utils.read_from_file())
-    #print game.numbers_list
-
-    #game.try_to_file = 12345
-    #game.bk_get_from_file = file.get_answer(file.read_from_file())
-    #print game.bk_get_from_file
-    #game.analyze_bulls_cows()
-    #print(game.numbers_list)
+        if len(self.numbers_list) > 1:
+            rand_i = random.randint(0, len(self.numbers_list))
+            self.try_to_file = self.numbers_list[rand_i]
+            return self.try_to_file
+        else:
+            return self.numbers_list[0]
