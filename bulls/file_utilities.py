@@ -42,6 +42,7 @@ class FileUtilities(object):
         file.close()
 
     def get_guess(self, lines_from_file):
-        guess = lines_from_file[-1]
-        if len(guess) > 3:
-            return guess
+        if len(lines_from_file) > 0:
+            guess = lines_from_file[-1]
+            if len(guess) > 3:
+                return guess
