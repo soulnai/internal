@@ -2,7 +2,6 @@ language: python
 python:
   - "2.7"
 before_install:
-  - "sh -e /etc/init.d/xvfb start"
   - "wget https://github.com/soulnai/internal/blob/master/tests/unittests/parameters.txt"
 # command to install dependencies
 install:
