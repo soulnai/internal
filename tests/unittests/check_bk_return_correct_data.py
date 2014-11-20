@@ -16,7 +16,7 @@ file.close()
 
 @pytest.mark.parametrize('param1', file_lines)
 @pytest.mark.parametrize('param2', file_lines)
-class TestClass(unittest.TestCase):
+class TestClass:
 
     def test_bk_output_length(self, param1, param2):
         game = bulls.utility_functions.GameUtilityFunctions()
