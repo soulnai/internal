@@ -28,6 +28,3 @@ class TestClass:
         game = bulls.utility_functions.GameUtilityFunctions()
         func_response = game.return_bulls_cows_to_file(param1, param2)
         assert func_response.isdigit()
-
-if __name__ == '__main__':
-    pytest.main('check_bk_return_correct_data.py -vv')
