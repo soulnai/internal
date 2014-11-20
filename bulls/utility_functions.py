@@ -60,13 +60,16 @@ class GameUtilityFunctions(object):
         cows = 0
         try_num_to_str = str(try_from_file)
         secret_num_to_str = str(secret_number)
-        for i in range(0, self.game_number_length, 1):
-            for j in range(0, self.game_number_length, 1):
-                if try_num_to_str[i] == secret_num_to_str[j]:
-                    if i == j:
-                        bulls = bulls + 1
-                    else:
-                        cows = cows + 1
+        if try_num_to_str.isdigit() and secret_num_to_str.isdigit() and len(try_num_to_str) == self.game_number_length and len(secret_num_to_str):
+            for i in range(0, self.game_number_length, 1):
+                for j in range(0, self.game_number_length, 1):
+                    if try_num_to_str[i] == secret_num_to_str[j]:
+                        if i == j:
+                            bulls = bulls + 1
+                        else:
+                            cows = cows + 1
+        else:
+            print("Some argument is not correct")
         return str(cows) + str(bulls)
 
     def generate_number(self):

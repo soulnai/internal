@@ -1,9 +1,7 @@
-#! /usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 #stdlib
 import sys
+import io
 
 #project_classes
 import bulls.utility_functions
@@ -12,20 +10,23 @@ import bulls.utility_functions
 import pytest
 import unittest
 
-class CheckBkFunctionReturnCorrectData(unittest.TestCase):
+file = open('parameters.txt', 'r')
+file_lines = file.readlines()
+file.close()
 
-    def setUp(self):
-        """Read test data from file"""
+@pytest.mark.parametrize('param1', file_lines)
+@pytest.mark.parametrize('param2', file_lines)
+def test_bk_output_length(param1, param2):
+    game = bulls.utility_functions.GameUtilityFunctions()
+    func_response = game.return_bulls_cows_to_file(param1, param2)
+    assert len(func_response) == 2
 
+@pytest.mark.parametrize('param1', file_lines)
+@pytest.mark.parametrize('param2', file_lines)
+def test_bk_output_is_digit(param1, param2):
+    game = bulls.utility_functions.GameUtilityFunctions()
+    func_response = game.return_bulls_cows_to_file(param1, param2)
+    assert func_response.isdigit()
 
-    def tearDown(self):
-        a=1
-
-    def test_bk_output(self):
-        game = bulls.utility_functions.GameUtilityFunctions()
-        func_response = game.return_bulls_cows_to_file(12345, 12345)
-        self.assertEqual(len(func_response), 2, 'incorrect return size')
-
-if __name__ == "__main__":
-    #sys.argv = ['', 'Test.testName']
-    pytest.main()
+if __name__ == '__main__':
+    pytest.main('check_bk_return_correct_data.py -vv')
