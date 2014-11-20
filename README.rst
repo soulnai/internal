@@ -1,6 +1,7 @@
 Python Inception course
 =======================
-
+.. image:: https://travis-ci.org/soulnai/internal.svg?branch=master
+    :alt: Build status
 Program
 -------
 
