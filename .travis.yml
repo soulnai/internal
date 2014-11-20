@@ -3,12 +3,8 @@ python:
   - "2.7"
 before_install:
   - "sh -e /etc/init.d/xvfb start"
-  - "export DISPLAY=:99.0"
-  - "wget http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar"
-  - "java -jar selenium-server-standalone-2.44.0.jar > /dev/null &"
-  - "sleep 10"
 # command to install dependencies
 install:
   - "pip install -r requirements.txt"
 # command to run tests
-script: "py.test tests\unittests\check_bk_return_correct_data.py"
+script: "py.test tests/unittests/check_bk_return_correct_data.py"
