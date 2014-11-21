@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 # -*- coding: utf-8 -*-
 #stdlib
 import sys
@@ -21,9 +22,17 @@ class TestClass:
     def test_bk_output_length(self, param1, param2):
         game = bulls.utility_functions.GameUtilityFunctions()
         func_response = game.return_bulls_cows_to_file(param1, param2)
+        print(func_response)
         assert len(func_response) == 2
 
     def test_bk_output_is_digit(self, param1, param2):
         game = bulls.utility_functions.GameUtilityFunctions()
         func_response = game.return_bulls_cows_to_file(param1, param2)
+        print(func_response)
         assert func_response.isdigit()
+
+    def test_bk_output_in_range(self, param1, param2):
+        game = bulls.utility_functions.GameUtilityFunctions()
+        func_response = game.return_bulls_cows_to_file(param1, param2)
+        print(func_response)
+        assert int(func_response[0]) in [0, 1, 2, 3, 4, 5]

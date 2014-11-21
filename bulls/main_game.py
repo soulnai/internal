@@ -52,13 +52,14 @@ if __name__ == "__main__":
                 print guess_from_file
             if guess_from_file != None:
                 bk_to_write = game.return_bulls_cows_to_file(guess_from_file, game.secret_number)
-                if int(bk_to_write[0]) == 0 and int(bk_to_write[1]) == 5:
-                        utils.write_try_to_file(bk_to_write)
-                        print "Win"
-                        game_play = False
-                        sys.exit(0)
-                        break
-                utils.write_try_to_file(bk_to_write)
+                if bk_to_write != None:
+                    if int(bk_to_write[0]) == 0 and int(bk_to_write[1]) == 5:
+                            utils.write_try_to_file(bk_to_write)
+                            print "Win"
+                            game_play = False
+                            sys.exit(0)
+                            break
+                    utils.write_try_to_file(bk_to_write)
             tries_count += 1
             time.sleep(1)
             if tries_count > 1000:
