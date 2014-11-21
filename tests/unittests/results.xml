@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="0" name="pytest" skips="0" tests="75" time="0.400"><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[12345
+-12345
+]" time="0.000999927520752"><system-out>5
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[12345
+-123456
+]" time="0.0"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[12345
+-321654
+]" time="0.000999927520752"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[12345
+-Hello
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[12345
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[123456
+-12345
+]" time="0.0"><system-out>5
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[123456
+-123456
+]" time="0.00100016593933"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[123456
+-321654
+]" time="0.0"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[123456
+-Hello
+]" time="0.00100016593933"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[123456
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[321654
+-12345
+]" time="0.000999927520752"><system-out>5
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[321654
+-123456
+]" time="0.0"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[321654
+-321654
+]" time="0.000999927520752"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[321654
+-Hello
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[321654
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[Hello
+-12345
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[Hello
+-123456
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[Hello
+-321654
+]" time="0.00100016593933"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[Hello
+-Hello
+]" time="0.0"><system-out>5
+25
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[Hello
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[абырабыр
+-12345
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[абырабыр
+-123456
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[абырабыр
+-321654
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[абырабыр
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_length[абырабыр
+-абырабыр
+]" time="0.0"><system-out>16
+25
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[12345
+-12345
+]" time="0.0"><system-out>5
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[12345
+-123456
+]" time="0.0"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[12345
+-321654
+]" time="0.00100016593933"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[12345
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[12345
+-абырабыр
+]" time="0.00100016593933"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[123456
+-12345
+]" time="0.0"><system-out>5
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[123456
+-123456
+]" time="0.000999927520752"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[123456
+-321654
+]" time="0.0"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[123456
+-Hello
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[123456
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[321654
+-12345
+]" time="0.000999927520752"><system-out>5
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[321654
+-123456
+]" time="0.0"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[321654
+-321654
+]" time="0.000999927520752"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[321654
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[321654
+-абырабыр
+]" time="0.000999927520752"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[Hello
+-12345
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[Hello
+-123456
+]" time="0.000999927520752"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[Hello
+-321654
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[Hello
+-Hello
+]" time="0.0"><system-out>5
+25
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[Hello
+-абырабыр
+]" time="0.00100016593933"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[абырабыр
+-12345
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[абырабыр
+-123456
+]" time="0.00100016593933"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[абырабыр
+-321654
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[абырабыр
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_is_digit[абырабыр
+-абырабыр
+]" time="0.0"><system-out>16
+25
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[12345
+-12345
+]" time="0.0"><system-out>5
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[12345
+-123456
+]" time="0.0"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[12345
+-321654
+]" time="0.00100016593933"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[12345
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[12345
+-абырабыр
+]" time="0.00100016593933"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[123456
+-12345
+]" time="0.000999927520752"><system-out>5
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[123456
+-123456
+]" time="0.0"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[123456
+-321654
+]" time="0.000999927520752"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[123456
+-Hello
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[123456
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[321654
+-12345
+]" time="0.00100016593933"><system-out>5
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[321654
+-123456
+]" time="0.0"><system-out>6
+22
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[321654
+-321654
+]" time="0.0"><system-out>6
+05
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[321654
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[321654
+-абырабыр
+]" time="0.0"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[Hello
+-12345
+]" time="0.000999927520752"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[Hello
+-123456
+]" time="0.000999927520752"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[Hello
+-321654
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[Hello
+-Hello
+]" time="0.0"><system-out>5
+25
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[Hello
+-абырабыр
+]" time="0.00100016593933"><system-out>16
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[абырабыр
+-12345
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[абырабыр
+-123456
+]" time="0.0"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[абырабыр
+-321654
+]" time="0.000999927520752"><system-out>6
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[абырабыр
+-Hello
+]" time="0.0"><system-out>5
+00
+</system-out></testcase><testcase classname="check_bk_return_correct_data.TestClass" name="test_bk_output_in_range[абырабыр
+-абырабыр
+]" time="0.000999927520752"><system-out>16
+25
+</system-out></testcase></testsuite>
