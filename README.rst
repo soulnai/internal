@@ -1,57 +1,15 @@
-Python Inception course
+Bulls&Cows
 =======================
-.. image:: https://travis-ci.org/soulnai/internal.svg?branch=master
-    :alt: Build status
+
 Program
 -------
 
-* Intro (day1)
-    * Fascinating world, life style
-    * Conventions (Readability counts)
-    * Documentation
-    * Testing
-    * Environment ( GNU/Linux/OS X )
-    * Ecosystem
+*Overview
 
-* Project structure (day2, practical)
-     * Tools to support project life-cycle
-        - git, shell, pip, virtualenv (wrapper),
+    This program designed to play game Bulls&Cows trough the text file. Run from console. It can work in two modes:
+        - Server - generate the secret number, listen for tries in file, and generate response after analyze try and secret number match.
+        - Client - try to guess secret number by sending guesses to file, get response and work with them to generate new guess.
 
-* Dive into language (day3)
-    * Basics (questions)
-    * OOP
-    * FP (mutability)/top modules
+    If you want a game to play with itself you can run two copies with different modes in the same directory.
 
-* Intro into testing frameworks (day4)
-    - general terms and concepts
-    - pytest
-    - nose
-    - unittest
-    - **TODO**: add more per testing approach
-
-* Unittest (day 5)
-    - concepts
-    - examples
-
-* Nose (day 6)
-    - concepts
-    - examples
-
-* Pytest (day 7)
-    - concepts
-    - examples
-
-* Application distribution (day 8)
-    - setup.py
-    - setuptools
-    - sdist
-    - egg/wheel
-
-* Integration with CI (day 9)
-    - travis
-    - jenkins
-
-* Expert tools to manage project lifecycle (day 10)
-    - setuptools [none]
-    - fabfile [none]
-    - Makefile [none]
+    In the game directory should be an empty text file named game.txt in UTF-8 without BOM encoding.

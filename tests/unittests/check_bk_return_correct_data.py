@@ -1,11 +1,10 @@
-from __future__ import unicode_literals
 # -*- coding: utf-8 -*-
 #stdlib
 import sys
 import io
 
 #project_classes
-import bulls.utility_functions
+import game.game_logic_functions
 
 #testframework
 import pytest
@@ -17,22 +16,17 @@ file.close()
 
 @pytest.mark.parametrize('param1', file_lines)
 @pytest.mark.parametrize('param2', file_lines)
-class TestClass:
+def test_bk_output_length(param1, param2):
+    game = game.utility_functions.GameUtilityFunctions()
+    func_response = game.return_bulls_cows_to_file(param1, param2)
+    assert len(func_response) == 2
 
-    def test_bk_output_length(self, param1, param2):
-        game = bulls.utility_functions.GameUtilityFunctions()
-        func_response = game.return_bulls_cows_to_file(param1, param2)
-        print(func_response)
-        assert len(func_response) == 2
+@pytest.mark.parametrize('param1', file_lines)
+@pytest.mark.parametrize('param2', file_lines)
+def test_bk_output_is_digit(param1, param2):
+    game = game.utility_functions.GameUtilityFunctions()
+    func_response = game.return_bulls_cows_to_file(param1, param2)
+    assert func_response.isdigit()
 
-    def test_bk_output_is_digit(self, param1, param2):
-        game = bulls.utility_functions.GameUtilityFunctions()
-        func_response = game.return_bulls_cows_to_file(param1, param2)
-        print(func_response)
-        assert func_response.isdigit()
-
-    def test_bk_output_in_range(self, param1, param2):
-        game = bulls.utility_functions.GameUtilityFunctions()
-        func_response = game.return_bulls_cows_to_file(param1, param2)
-        print(func_response)
-        assert int(func_response[0]) in [0, 1, 2, 3, 4, 5]
+if __name__ == '__main__':
+    pytest.main('check_bk_return_correct_data.py -vv')
