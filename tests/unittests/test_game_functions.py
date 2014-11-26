@@ -37,8 +37,8 @@ class TestGameUtilityFunctions(TestCase):
 
     def test_analyze_bulls_cows_and_remove_number_list(self):
         #given
-        numbers_list = [12345, 12346, 11235]
-        bk_stub = "23"
+        numbers_list = [12345, 12346, 11235, 12347]
+        bk_stub = "05"
         number_stub = 12347
         #execure
         func_response = game.game_logic_functions.analyze_bulls_cows_and_remove_number_list(bk_stub, number_stub, numbers_list)
