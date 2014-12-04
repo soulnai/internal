@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-import io
+import io_
 import random
 
 
@@ -24,10 +24,9 @@ def all_digits_are_unique(number):
     num = str(number)
     if num.isdigit() == False:
         return False
-    for i in range(0, len(num), 1):
-        for j in range(0, len(num), 1):
-            if num[i] == num[j] and i != j:
-                return False
+    to_check = set(num)
+    if len(to_check) < len(num):
+        return False
     return True
 
 
@@ -91,9 +90,10 @@ def generate_secret_number(numbers_list):
     :return: random number from numbers_list
     :rtype: int
     """
-    rand_i = random.randint(0, len(numbers_list))
-    secret_number = numbers_list[rand_i]
-    return secret_number
+    if len(numbers_list) > 0:
+        rand_i = random.randint(0, len(numbers_list))
+        secret_number = numbers_list[rand_i]
+        return secret_number
 
 
 def return_bulls_cows_to_file(try_from_file, secret_number):

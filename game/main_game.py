@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-import io
+import io_
 import game_logic_functions
 import time
 import sys
-import io
+import io_
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
@@ -27,11 +27,11 @@ if __name__ == "__main__":
         numbers_list = game_logic_functions.generate_numbers_list(game_number_length)
         tries_count = 0
         try_to_file = game_logic_functions.generate_number(numbers_list)
-        io.write_try_to_file(try_to_file, gamefile)
+        io_.write_try_to_file(try_to_file, gamefile)
         while game_play:
             if len(numbers_list) > 0:
-                lines = io.read_from_file(gamefile)
-                bk_get_from_file = io.get_answer(lines)
+                lines = io_.read_from_file(gamefile)
+                bk_get_from_file = io_.get_answer(lines)
                 if bk_get_from_file != None:
                     numbers_list = game_logic_functions.analyze_bulls_cows_and_remove_number_list(
                         bk_get_from_file, try_to_file, numbers_list)
@@ -42,7 +42,7 @@ if __name__ == "__main__":
                         sys.exit(0)
                         break
                     try_to_file = game_logic_functions.generate_number(numbers_list)
-                    io.write_try_to_file(try_to_file, gamefile)
+                    io_.write_try_to_file(try_to_file, gamefile)
             tries_count += 1
             time.sleep(1)
             if tries_count > 1000:
@@ -57,9 +57,9 @@ if __name__ == "__main__":
         secret_number = game_logic_functions.generate_secret_number(numbers_list)
         print secret_number
         while game_play:
-            lines = io.read_from_file(gamefile)
+            lines = io_.read_from_file(gamefile)
             if lines != None:
-                guess_from_file = io.get_guess(lines)
+                guess_from_file = io_.get_guess(lines)
                 if guess_from_file != None:
                     print guess_from_file
                 else:
@@ -67,12 +67,12 @@ if __name__ == "__main__":
             if guess_from_file != None:
                 bk_to_write = game_logic_functions.return_bulls_cows_to_file(guess_from_file, secret_number)
                 if int(bk_to_write[0]) == 0 and int(bk_to_write[1]) == 5:
-                        io.write_try_to_file(bk_to_write, gamefile)
+                        io_.write_try_to_file(bk_to_write, gamefile)
                         print "Win"
                         game_play = False
                         sys.exit(0)
                         break
-                io.write_try_to_file(bk_to_write, gamefile)
+                io_.write_try_to_file(bk_to_write, gamefile)
             tries_count += 1
             time.sleep(1)
             if tries_count > 1000:
